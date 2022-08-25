@@ -19,8 +19,8 @@ from django.urls import path
 from Family.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(' ',home),
-    path('family_member_registration/<name>/<surname>/<born_date>/<email>/<phone_number>',family_member_registration),
+    path('',home),
+    path('family_member_registration/<str:name>/<str:surname>/<str:birthdate>/<str:email>/<int:phone_number>',family_member_registration),
 
 
 ]

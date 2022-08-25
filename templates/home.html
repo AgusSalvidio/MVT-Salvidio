@@ -5,15 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> MVT | Inicio</title>
+<style>
+    table, th, td {
+      border: 1px solid rgb(0, 63, 145);
+      border-collapse: collapse;
+      }
+      th, td {
+      padding: 15px;
+      }
+      tr:hover {background-color: rgb(35, 88, 158);}
+</style>    
 </head>
-<body>
-
+<body style="background-color:rgb(198, 202, 202);">
     <h1 style="color:rgb(0, 63, 145)">Bienvenido!</h1>
-    <h3 style="color:rgb(0, 63, 145)">Para agregar familiares al sistema se debe de ingresar a la siguiente url y completar con los valores solicitados como se muestra: 
-        localhost:8000/family_member_registration/Juan/Perez/20-12-1980/jperez@gmail.com/39272347</h3>
+    <h3 style="color:rgb(0, 63, 145)">Para agregar familiares al sistema se debe de ingresar a la siguiente url y completar con los valores solicitados:</h3>
+    <p style="color:rgb(0, 63, 145)">  Ejemplo: <a href='http://localhost:8000/family_member_registration/Juan/Perez/1980-12-25/jperez@gmail.com/39272347'>localhost:8000/family_member_registration/Juan/Perez/1980-12-25/jperez@gmail.com/39272347</a></p>
+  <section>
     <h3 style="color:rgb(0, 63, 145)">Los familiares registrados en el sistema son:</h3>
-
-    <table>
+    <table style="border:1px solid rgb(0, 63, 145);margin-left:auto;margin-right:auto;">
         <tr>
           <th>Nombre Completo</th>
           <th>Fecha de Nacimiento</th>
@@ -31,6 +40,6 @@
           </tr>
         {% endfor %}
       </table>
-
+  </section>    
 </body>
 </html>

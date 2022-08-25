@@ -1,7 +1,7 @@
 from django.db import models
-from datetime import *
+import datetime
 
-current_date = datetime.date.today()
+current_date = datetime.datetime.today()
 
 class FamilyMember(models.Model):
     name = models.CharField(max_length=50)

@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from Family.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',home),
+    path('family_member_registration/<str:name>/<str:surname>/<str:birthdate>/<str:email>/<int:phone_number>',family_member_registration),
+
+
 ]

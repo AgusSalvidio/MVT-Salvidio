@@ -8,9 +8,9 @@ def home(request):
     return render(request,'home.html',context)
 
 
-def family_member_registration(request,name,surname,born_date,email,phone_number):
+def family_member_registration(request,name,surname,birthdate,email,phone_number):
 
-    family_member = FamilyMember(name,surname,born_date,email,phone_number)
+    family_member = FamilyMember(name,surname,birthdate,email,phone_number)
     family_member.save()
     context = { 'family_member': family_member}
 

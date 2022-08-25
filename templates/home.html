@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> MVT | Inicio</title>
 </head>
 <body>
-    
+
+    <h1 style="color:rgb(0, 63, 145)">Bienvenido!</h1>
+    <h3 style="color:rgb(0, 63, 145)">Para agregar familiares al sistema se debe de ingresar a la siguiente url y completar con los valores solicitados como se muestra: 
+        localhost:8000/family_member_registration/Juan/Perez/20-12-1980/jperez@gmail.com/39272347</h3>
+    <h3 style="color:rgb(0, 63, 145)">Los familiares registrados en el sistema son:</h3>
+
+    <table>
+        <tr>
+          <th>Nombre Completo</th>
+          <th>Fecha de Nacimiento</th>
+          <th>Edad</th>
+          <th>Email</th>
+          <th>Teléfono</th>
+        </tr>
+        {% for family_member in family_members %}
+        <tr>
+            <th>{{ family_member.full_name }}</th>
+            <th>{{ family_member.birthdate }}</th>
+            <th>{{ family_member.age }}</th>
+            <th>{{ family_member.email }}</th>
+            <th>{{ family_member.phone_number }}</th>
+          </tr>
+        {% endfor %}
+      </table>
+
 </body>
 </html>
